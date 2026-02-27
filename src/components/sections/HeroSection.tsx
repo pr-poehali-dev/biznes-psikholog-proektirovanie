@@ -1,4 +1,6 @@
-import { PORTRAIT, useAnimSection } from "./shared";
+import { useAnimSection } from "./shared";
+
+const PORTRAIT = "https://cdn.poehali.dev/projects/ac059f9e-802b-4f7c-8586-eadc1391eb04/bucket/13083852-0ee0-4b57-adf1-a7468819896a.jpg";
 
 interface HeroSectionProps {
   scrollTo: (id: string) => void;
@@ -90,7 +92,7 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
               <img
                 src={PORTRAIT}
                 alt="Анна Уварова"
-                style={{ width: "100%", maxHeight: "600px", objectFit: "cover", objectPosition: "top center", filter: "grayscale(100%)", position: "relative", zIndex: 1 }}
+                style={{ width: "100%", maxHeight: "600px", objectFit: "cover", objectPosition: "top center", position: "relative", zIndex: 1 }}
               />
             </div>
           </div>
