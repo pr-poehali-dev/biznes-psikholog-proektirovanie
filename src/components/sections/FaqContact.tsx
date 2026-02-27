@@ -19,7 +19,7 @@ export default function FaqContact({ scrollTo }: FaqContactProps) {
         ref={faq.ref}
         style={{ borderTop: "1px solid var(--rule)", backgroundColor: "#EFECE8", ...faq.style }}
       >
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "6rem 4rem" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }} className="section-pad">
           <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.68rem", textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--graphite-light)", marginBottom: "3rem" }}>
             Вопросы и ответы
           </p>
@@ -27,18 +27,18 @@ export default function FaqContact({ scrollTo }: FaqContactProps) {
             {FAQ_ITEMS.map((item, i) => (
               <div key={i} style={{ borderTop: "1px solid var(--rule)" }}>
                 <button
-                  style={{ width: "100%", display: "flex", alignItems: "flex-start", justifyContent: "space-between", padding: "1.5rem 0", textAlign: "left", gap: "2rem", background: "none", border: "none", cursor: "pointer" }}
+                  style={{ width: "100%", display: "flex", alignItems: "flex-start", justifyContent: "space-between", padding: "1.5rem 0", textAlign: "left", gap: "1rem", background: "none", border: "none", cursor: "pointer" }}
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
-                  <p style={{ fontFamily: "Cormorant, serif", fontSize: "1.3rem", fontWeight: 300, color: "var(--graphite)", lineHeight: 1.4, opacity: openFaq === i ? 1 : 0.85 }}>
+                  <p style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(1.1rem, 2.5vw, 1.3rem)", fontWeight: 300, color: "var(--graphite)", lineHeight: 1.4, opacity: openFaq === i ? 1 : 0.85 }}>
                     {item.q}
                   </p>
                   <span style={{ color: "var(--indigo)", flexShrink: 0, marginTop: "4px", transition: "transform 0.3s ease", transform: openFaq === i ? "rotate(45deg)" : "rotate(0deg)", display: "block" }}>
                     <Icon name="Plus" size={16} />
                   </span>
                 </button>
-                <div style={{ maxHeight: openFaq === i ? "300px" : "0", overflow: "hidden", transition: "max-height 0.4s ease, opacity 0.3s ease", opacity: openFaq === i ? 1 : 0 }}>
-                  <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.85rem", lineHeight: 1.9, color: "var(--graphite-light)", paddingBottom: "2rem", paddingRight: "3rem" }}>
+                <div style={{ maxHeight: openFaq === i ? "400px" : "0", overflow: "hidden", transition: "max-height 0.4s ease, opacity 0.3s ease", opacity: openFaq === i ? 1 : 0 }}>
+                  <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.85rem", lineHeight: 1.9, color: "var(--graphite-light)", paddingBottom: "2rem", paddingRight: "1rem" }}>
                     {item.a}
                   </p>
                 </div>
@@ -55,8 +55,8 @@ export default function FaqContact({ scrollTo }: FaqContactProps) {
         ref={contact.ref}
         style={{ borderTop: "1px solid var(--rule)", backgroundColor: "var(--graphite)", ...contact.style }}
       >
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "6rem 4rem" }}>
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }} className="section-pad">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
             <div>
               <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.68rem", textTransform: "uppercase", letterSpacing: "0.2em", color: "rgba(245,242,238,0.35)", marginBottom: "2rem" }}>
                 Контакты
@@ -76,7 +76,7 @@ export default function FaqContact({ scrollTo }: FaqContactProps) {
                   onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                 >
                   <Icon name="Mail" size={14} />
-                  <span style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.85rem" }}>anna.uvarova2012@yandex.ru</span>
+                  <span style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.85rem", wordBreak: "break-all" }}>anna.uvarova2012@yandex.ru</span>
                 </a>
                 <a
                   href="tel:+79269191718"
@@ -164,7 +164,7 @@ export default function FaqContact({ scrollTo }: FaqContactProps) {
 
       {/* FOOTER */}
       <footer style={{ borderTop: "1px solid rgba(216,211,204,0.12)", backgroundColor: "var(--graphite)" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "1.5rem 4rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }} className="footer-inner">
           <p style={{ fontFamily: "Cormorant, serif", fontSize: "1rem", letterSpacing: "0.18em", color: "rgba(245,242,238,0.25)" }}>A·U</p>
           <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.7rem", color: "rgba(245,242,238,0.2)" }}>© 2024 Анна Уварова</p>
         </div>

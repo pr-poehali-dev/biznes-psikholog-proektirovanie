@@ -16,13 +16,13 @@ export default function AboutServices({ scrollTo }: AboutServicesProps) {
         ref={about.ref}
         style={{ borderTop: "1px solid var(--rule)", backgroundColor: "var(--graphite)", ...about.style }}
       >
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "6rem 4rem" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }} className="section-pad">
           <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.68rem", textTransform: "uppercase", letterSpacing: "0.2em", color: "rgba(245,242,238,0.4)", marginBottom: "3rem" }}>
             О подходе
           </p>
-          <div className="grid md:grid-cols-2 gap-16">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16">
             <div>
-              <h2 style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, lineHeight: 1.25, color: "var(--cream)", marginBottom: "2rem" }}>
+              <h2 style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 300, lineHeight: 1.25, color: "var(--cream)", marginBottom: "2rem" }}>
                 Профессиональная позиция
               </h2>
               <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.875rem", lineHeight: 2, color: "rgba(245,242,238,0.6)" }}>
@@ -40,7 +40,7 @@ export default function AboutServices({ scrollTo }: AboutServicesProps) {
               ].map((item, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "1rem" }}>
                   <div style={{ width: "1px", height: "48px", backgroundColor: "var(--indigo)", flexShrink: 0, marginTop: "4px" }} />
-                  <p style={{ fontFamily: "Cormorant, serif", fontSize: "1.2rem", fontWeight: 300, color: "var(--cream)", paddingTop: "4px", lineHeight: 1.4 }}>
+                  <p style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(1rem, 2.5vw, 1.2rem)", fontWeight: 300, color: "var(--cream)", paddingTop: "4px", lineHeight: 1.4 }}>
                     {item}
                   </p>
                 </div>
@@ -49,20 +49,13 @@ export default function AboutServices({ scrollTo }: AboutServicesProps) {
           </div>
 
           {/* 3 steps */}
-          <div style={{ marginTop: "5rem", paddingTop: "4rem", borderTop: "1px solid rgba(216,211,204,0.2)", display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
+          <div className="steps-grid">
             {[
               { n: "01", title: "Запрос", text: "Формулируем, что происходит и что важно изменить." },
               { n: "02", title: "Решение", text: "Исследуем паттерны, выборы и то, что за ними стоит." },
               { n: "03", title: "Осознанность", text: "Новая устойчивость, которая остаётся после завершения работы." },
             ].map((step, i) => (
-              <div
-                key={i}
-                style={{
-                  padding: "2rem",
-                  paddingLeft: i === 0 ? 0 : "2rem",
-                  borderLeft: i > 0 ? "1px solid rgba(216,211,204,0.2)" : "none",
-                }}
-              >
+              <div key={i} className="step-item">
                 <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.65rem", color: "rgba(245,242,238,0.25)", letterSpacing: "0.15em", marginBottom: "1rem" }}>{step.n}</p>
                 <p style={{ fontFamily: "Cormorant, serif", fontSize: "1.5rem", fontWeight: 300, color: "var(--cream)", marginBottom: "0.75rem" }}>{step.title}</p>
                 <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.8rem", lineHeight: 1.9, color: "rgba(245,242,238,0.5)" }}>{step.text}</p>
@@ -78,16 +71,16 @@ export default function AboutServices({ scrollTo }: AboutServicesProps) {
         ref={services.ref}
         style={{ borderTop: "1px solid var(--rule)", ...services.style }}
       >
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "6rem 4rem" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }} className="section-pad">
           <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.68rem", textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--graphite-light)", marginBottom: "3rem" }}>
             Услуги
           </p>
 
-          <div className="grid md:grid-cols-2 gap-16" style={{ marginBottom: "4rem" }}>
-            <h2 style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, lineHeight: 1.25, color: "var(--graphite)" }}>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16" style={{ marginBottom: "3rem" }}>
+            <h2 style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 300, lineHeight: 1.25, color: "var(--graphite)" }}>
               С какими задачами<br />работаю
             </h2>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+            <div className="tasks-grid">
               {TASKS.map((task, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                   <div style={{ width: "16px", borderTop: "1px solid var(--indigo)", flexShrink: 0 }} />
@@ -98,9 +91,9 @@ export default function AboutServices({ scrollTo }: AboutServicesProps) {
           </div>
 
           {/* Manifest */}
-          <div style={{ borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", padding: "4rem 0", margin: "2rem 0" }}>
+          <div style={{ borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", padding: "3rem 0", margin: "2rem 0" }}>
             <div style={{ maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
-              <p style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, fontStyle: "italic", lineHeight: 1.8, color: "var(--graphite)" }}>
+              <p style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)", fontWeight: 300, fontStyle: "italic", lineHeight: 1.8, color: "var(--graphite)" }}>
                 «Личность. Семья. Наследие.<br />
                 Три измерения, которые определяют,<br />
                 какой бизнес вы строите<br />
@@ -109,7 +102,7 @@ export default function AboutServices({ scrollTo }: AboutServicesProps) {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16" style={{ marginTop: "4rem" }}>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16" style={{ marginTop: "3rem" }}>
             <div>
               <h3 style={{ fontFamily: "Cormorant, serif", fontSize: "1.8rem", fontWeight: 300, color: "var(--graphite)", marginBottom: "2rem" }}>Результат</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
@@ -123,15 +116,15 @@ export default function AboutServices({ scrollTo }: AboutServicesProps) {
             </div>
             <div>
               <h3 style={{ fontFamily: "Cormorant, serif", fontSize: "1.8rem", fontWeight: 300, color: "var(--graphite)", marginBottom: "2rem" }}>Формат</h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
+              <div style={{ display: "flex", flexDirection: "column" }}>
                 {[
                   ["Сессия", "50 минут"],
                   ["Место", "Москва / Онлайн"],
                   ["Конфиденциальность", "Полная"],
                   ["Приём", "Ограниченное число клиентов"],
                 ].map(([label, value], i) => (
-                  <div key={i} style={{ display: "flex", alignItems: "baseline", gap: "1.5rem", borderBottom: "1px solid var(--rule)", padding: "1rem 0" }}>
-                    <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.68rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--graphite-light)", width: "160px", flexShrink: 0 }}>{label}</p>
+                  <div key={i} style={{ display: "flex", alignItems: "baseline", flexWrap: "wrap", gap: "0.5rem 1.5rem", borderBottom: "1px solid var(--rule)", padding: "1rem 0" }}>
+                    <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.68rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--graphite-light)", minWidth: "120px" }}>{label}</p>
                     <p style={{ fontFamily: "Cormorant, serif", fontSize: "1.1rem", fontWeight: 300, color: "var(--graphite)" }}>{value}</p>
                   </div>
                 ))}

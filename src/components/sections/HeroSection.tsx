@@ -13,8 +13,8 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
     <>
       {/* HERO */}
       <section id="hero" style={{ minHeight: "100vh", display: "flex", alignItems: "center", paddingTop: "4rem" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "5rem 4rem", width: "100%" }}>
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div style={{ maxWidth: "1200px", margin: "0 auto", width: "100%" }} className="hero-pad">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
               <p
                 className="animate-fade-in-up animate-delay-1"
@@ -25,14 +25,14 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
 
               <h1
                 className="animate-fade-in-up animate-delay-2"
-                style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(3.5rem, 7vw, 5.5rem)", fontWeight: 300, lineHeight: 1, color: "var(--graphite)", marginBottom: "1.5rem" }}
+                style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(3rem, 10vw, 5.5rem)", fontWeight: 300, lineHeight: 1, color: "var(--graphite)", marginBottom: "1.5rem" }}
               >
                 Анна<br />Уварова
               </h1>
 
               <p
                 className="animate-fade-in-up animate-delay-3"
-                style={{ fontFamily: "Cormorant, serif", fontSize: "1.3rem", fontWeight: 300, fontStyle: "italic", color: "var(--graphite-light)", marginBottom: "2.5rem", lineHeight: 1.5 }}
+                style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(1rem, 3vw, 1.3rem)", fontWeight: 300, fontStyle: "italic", color: "var(--graphite-light)", marginBottom: "2.5rem", lineHeight: 1.5 }}
               >
                 Бизнес-психолог для собственников<br />и руководителей
               </p>
@@ -51,7 +51,7 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
 
               <p
                 className="animate-fade-in-up animate-delay-4"
-                style={{ fontFamily: "Cormorant, serif", fontSize: "1.4rem", fontWeight: 300, color: "var(--graphite)", marginBottom: "3rem", lineHeight: 1.4 }}
+                style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(1.1rem, 3vw, 1.4rem)", fontWeight: 300, color: "var(--graphite)", marginBottom: "3rem", lineHeight: 1.4 }}
               >
                 Индивидуальная работа<br />на уровне стратегических решений.
               </p>
@@ -66,10 +66,12 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
                   fontSize: "0.7rem",
                   textTransform: "uppercase",
                   letterSpacing: "0.12em",
-                  padding: "16px 32px",
+                  padding: "16px 28px",
                   border: "none",
                   cursor: "pointer",
                   transition: "opacity 0.3s ease",
+                  width: "100%",
+                  maxWidth: "340px",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.75")}
                 onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
@@ -79,20 +81,20 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
             </div>
 
             {/* Portrait */}
-            <div className="animate-fade-in-up animate-delay-3" style={{ position: "relative" }}>
+            <div className="animate-fade-in-up animate-delay-3 order-first md:order-last" style={{ position: "relative" }}>
               <div
                 style={{
                   position: "absolute",
                   inset: 0,
                   zIndex: 0,
-                  transform: "translate(16px, 16px)",
+                  transform: "translate(10px, 10px)",
                   backgroundColor: "var(--rule)",
                 }}
               />
               <img
                 src={PORTRAIT}
                 alt="Анна Уварова"
-                style={{ width: "100%", maxHeight: "600px", objectFit: "cover", objectPosition: "top center", position: "relative", zIndex: 1 }}
+                style={{ width: "100%", maxHeight: "clamp(320px, 60vw, 600px)", objectFit: "cover", objectPosition: "top center", position: "relative", zIndex: 1 }}
               />
             </div>
           </div>
@@ -104,10 +106,10 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
         ref={masshtab.ref}
         style={{ borderTop: "1px solid var(--rule)", ...masshtab.style }}
       >
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "6rem 4rem" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }} className="section-pad">
           <div style={{ maxWidth: "600px" }}>
             <h2
-              style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, lineHeight: 1.25, color: "var(--graphite)", marginBottom: "2rem" }}
+              style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 300, lineHeight: 1.25, color: "var(--graphite)", marginBottom: "2rem" }}
             >
               Когда растёт масштаб —<br />растёт внутренняя нагрузка
             </h2>

@@ -35,7 +35,7 @@ export default function Navbar({ scrollTo }: NavbarProps) {
         borderBottom: scrolled ? "1px solid var(--rule)" : "none",
       }}
     >
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 4rem" }} className="h-16 flex items-center justify-between">
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }} className="nav-inner h-16 flex items-center justify-between">
         <button
           onClick={() => handleScrollTo("hero")}
           style={{ color: "var(--graphite)", letterSpacing: "0.18em", fontFamily: "Cormorant, serif", fontSize: "1.1rem", background: "none", border: "none", cursor: "pointer" }}
@@ -85,7 +85,7 @@ export default function Navbar({ scrollTo }: NavbarProps) {
 
       {menuOpen && (
         <div style={{ backgroundColor: "var(--cream)", borderTop: "1px solid var(--rule)" }}>
-          <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "1.5rem 2rem" }} className="flex flex-col gap-5">
+          <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "1.5rem" }} className="flex flex-col gap-5">
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}
