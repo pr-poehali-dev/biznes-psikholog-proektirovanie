@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
-const PORTRAIT = "https://cdn.poehali.dev/projects/ac059f9e-802b-4f7c-8586-eadc1391eb04/files/3f5efa99-343d-4c2f-b9f3-f8d7e2692c7f.jpg";
+const PORTRAIT = "https://cdn.poehali.dev/projects/ac059f9e-802b-4f7c-8586-eadc1391eb04/bucket/308d671a-c386-4099-a050-69c5916357a5.jpg";
 
 const NAV_ITEMS = [
   { id: "about", label: "О подходе" },
@@ -268,7 +268,7 @@ export default function Index() {
               <img
                 src={PORTRAIT}
                 alt="Анна Уварова"
-                style={{ width: "100%", maxHeight: "600px", objectFit: "cover", filter: "grayscale(100%)", position: "relative", zIndex: 1 }}
+                style={{ width: "100%", maxHeight: "600px", objectFit: "cover", objectPosition: "top center", filter: "grayscale(100%)", position: "relative", zIndex: 1 }}
               />
             </div>
           </div>
