@@ -70,23 +70,27 @@ export default function FaqContact({ scrollTo }: FaqContactProps) {
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <a
-                  href="mailto:anna@uvarova.pro"
+                  href="mailto:anna.uvarova2012@yandex.ru"
                   style={{ display: "flex", alignItems: "center", gap: "0.75rem", color: "rgba(245,242,238,0.45)", textDecoration: "none", transition: "opacity 0.2s" }}
                   onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
                   onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                 >
                   <Icon name="Mail" size={14} />
-                  <span style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.85rem" }}>anna@uvarova.pro</span>
+                  <span style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.85rem" }}>anna.uvarova2012@yandex.ru</span>
                 </a>
                 <a
-                  href="tel:+79991234567"
+                  href="tel:+79269191718"
                   style={{ display: "flex", alignItems: "center", gap: "0.75rem", color: "rgba(245,242,238,0.45)", textDecoration: "none" }}
                   onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
                   onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                 >
                   <Icon name="Phone" size={14} />
-                  <span style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.85rem" }}>+7 999 123-45-67</span>
+                  <span style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.85rem" }}>+7 926 919-17-18</span>
                 </a>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", color: "rgba(245,242,238,0.45)" }}>
+                  <Icon name="MapPin" size={14} />
+                  <span style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.85rem" }}>Москва, Цветной б-р. 26 стр. 1</span>
+                </div>
               </div>
             </div>
 
