@@ -65,8 +65,8 @@ export default function FaqContact({ scrollTo }: FaqContactProps) {
                 Запросить<br />установочную встречу
               </h2>
               <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.85rem", lineHeight: 1.9, color: "rgba(245,242,238,0.5)", marginBottom: "3rem" }}>
-                Установочная встреча — 30 минут. Это возможность понять контекст
-                и формат предстоящей работы. Бесплатно.
+                Установочная встреча — 50 минут. Это возможность понять контекст
+                и формат предстоящей работы.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <a
