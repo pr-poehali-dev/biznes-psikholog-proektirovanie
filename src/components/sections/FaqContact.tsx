@@ -166,6 +166,9 @@ export default function FaqContact({ scrollTo }: FaqContactProps) {
       <footer style={{ borderTop: "1px solid rgba(216,211,204,0.12)", backgroundColor: "var(--graphite)" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }} className="footer-inner">
           <p style={{ fontFamily: "Cormorant, serif", fontSize: "1rem", letterSpacing: "0.18em", color: "rgba(245,242,238,0.25)" }}>A·U</p>
+          <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.65rem", color: "rgba(245,242,238,0.25)", textAlign: "center" }}>
+            ИП Уварова А. С. · ОГРНИП 322508100398078 · Права защищены
+          </p>
           <p style={{ fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.7rem", color: "rgba(245,242,238,0.2)" }}>© 2024 Анна Уварова</p>
         </div>
       </footer>
