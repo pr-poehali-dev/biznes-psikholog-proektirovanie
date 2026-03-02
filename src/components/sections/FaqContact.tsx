@@ -144,7 +144,7 @@ export default function FaqContact({ scrollTo }: FaqContactProps) {
               />
               <input
                 type="text"
-                placeholder="Telegram / WhatsApp"
+                placeholder="Номер мобильного"
                 value={contactVal}
                 onChange={(e) => setContactVal(e.target.value)}
                 style={{
