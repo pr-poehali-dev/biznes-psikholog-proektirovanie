@@ -55,6 +55,15 @@ export default function Navbar({ scrollTo }: NavbarProps) {
               {item.label}
             </button>
           ))}
+          <a
+            href="https://podelam.su/blog"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "var(--graphite-light)", letterSpacing: "0.14em", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.7rem", textDecoration: "none" }}
+            className="uppercase transition-opacity duration-200 hover:opacity-50"
+          >
+            Статьи
+          </a>
           <button
             onClick={() => handleScrollTo("contact")}
             style={{
@@ -96,6 +105,15 @@ export default function Navbar({ scrollTo }: NavbarProps) {
                 {item.label}
               </button>
             ))}
+            <a
+              href="https://podelam.su/blog"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "var(--graphite-light)", letterSpacing: "0.14em", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "0.7rem", textDecoration: "none" }}
+              className="uppercase"
+            >
+              Статьи
+            </a>
           </div>
         </div>
       )}
